@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+section {
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 30px 30px 0px 30px;
+}
+
+.menus {
+    display: flex;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+.menu {
+    flex: 1;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+main {
+    background-color: #d5d5d5;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 30px 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.about {
+    padding: 0px 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-family: monospace;
+    text-align: center;
+    font-size: 15px;
+}
+
+.connects {
+    padding-bottom: 19.92px;
+}
+
+.connect {
+    display: flex;
+}
+
+.socmed {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socmed img {
+    border-radius: 50%;
+}
+
+.socmed a {
+    display: none;
+}
+
+.gallery {
+    background-color: black;
+    border-radius: 30px;
+    padding: 19.92px 0px;
+}
+
+.gallery img:nth-child(1) {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.gallery img:nth-last-child(1) {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.footer-bottom p {
+    color: white;
+}
+
+@media (min-width:600px) {
+
+    .menu {
+        font-size: 25px;
+    }
+}
+
+@media (min-width:990px) {
+
+    section {
+        background-color: rgb(255, 253, 253);
+        margin: 0px 50px;
+    }
+
+    header {
+        display: flex;
+        padding: 30px;
+        background-color: black;
+        margin-bottom: 30px;
+        box-shadow: 4px 4px 30px rgb(0, 0, 0);
+    }
+
+    header img {
+        width: 30%;
+    }
+
+    .menus {
+        flex: 1;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 0px;
+    }
+
+    .about,
+    .connects {
+        background-color: #d5d5d5;
+        position: relative;
+        flex: 1;
+        border-radius: 30px;
+        margin-bottom: 30px;
+    }
+
+    .about {
+        margin-right: 10px;
+    }
+
+
+
+    .about img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 30px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .about img:hover {
+        opacity: 1;
+    }
+
+    .socmed a {
+        display: flex;
+        padding: 10px 0px;
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+        font-family: monospace;
+    }
+
+    .gallery {
+        padding: 0px;
+        border-radius: 0px;
+        background-color: white;
+        display: flex;
+        gap: 10px;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .columns .media {
+        object-fit: cover;
+    }
+
+    .gallery img:nth-child(1) {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .gallery img:nth-last-child(1) {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .footer-bottom p {
+        color: rgb(0, 0, 0);
+    }
+}
