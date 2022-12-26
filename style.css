@@ -108,6 +108,10 @@ p {
     .menu {
         font-size: 25px;
     }
+
+    .footer-bottom p{
+        font-size: 17px;
+    }
 }
 
 @media (min-width:990px) {
@@ -159,8 +163,6 @@ p {
     .about {
         margin-right: 10px;
     }
-
-
 
     .about img {
         position: absolute;

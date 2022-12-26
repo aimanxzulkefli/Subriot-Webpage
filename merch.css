@@ -74,13 +74,14 @@ header {
 
 .merchs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 10px;
     gap: 10px;
     font-family: monospace;
 }
 
 .merch {
+    position: relative;
     transition: all .5s;
 }
 
@@ -97,12 +98,22 @@ header {
     border-top-left-radius: 30px;
 }
 
-.merchs:nth-child(1) .merch:nth-child(3) img {
+.merchs:nth-child(1) .merch:nth-child(2) img {
     border-top-right-radius: 30px;
 }
 
 .merch-text h4 {
     margin: 0px;
+}
+
+.heart-icon {
+    position: absolute;
+    right: 0;
+    color: rgb(124, 124, 124);
+}
+
+.heart-icon:hover {
+    color: red;
 }
 
 .merch-price p {
@@ -113,4 +124,72 @@ header {
     color: white;
     text-align: center;
     font-size: 8px;
+}
+
+@media (min-width:600px) {
+
+    .menu {
+        font-size: 25px;
+    }
+
+    .selections {
+        font-size: 25px;
+    }
+
+    h4,.heart-icon,p{
+        font-size: 22px;
+    }
+
+    .footer-bottom p{
+        font-size: 17px;
+    }
+}
+
+@media (min-width:990px){
+    section {
+        background-color: rgb(255, 253, 253);
+        margin: 0px 50px;
+    }
+
+    header {
+        display: flex;
+        padding: 30px;
+        background-color: black;
+        margin-bottom: 30px;
+        box-shadow: 4px 4px 30px rgb(0, 0, 0);
+    }
+
+    header img {
+        width: 30%;
+    }
+
+    .menus {
+        flex: 1;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px 30px;
+        gap: 10px;
+        font-family: monospace;
+    }
+
+    .merchs:nth-child(1) .merch:nth-child(2) img {
+        border-top-right-radius: 0px;
+    }
+
+    .merchs:nth-child(1) .merch:nth-child(3) img {
+        border-top-right-radius: 30px;
+    }
+
+    .footer-bottom p {
+        color: rgb(0, 0, 0);
+    }
 }
