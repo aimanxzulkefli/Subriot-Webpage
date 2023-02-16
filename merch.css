@@ -2,12 +2,16 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+}
+
 section {
     width: auto;
     height: auto;
-    overflow-y: scroll;
     scroll-behavior: smooth;
-    background-color: rgb(0, 0, 0);
 }
 
 header {
@@ -36,46 +40,47 @@ header {
     text-decoration: underline;
 }
 
+main {
+    background-color: #d5d5d5;
+    border-radius: 30px;
+    padding: 30px 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .selections {
     display: flex;
-    padding: 15px;
+    padding: 0px 15px 15px 15px;
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(124, 124, 124);
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 30px;
 }
 
 .selection {
-    flex: 1;
+    border: 1px solid transparent;
+    border-bottom: none;
     text-align: center;
+    width: 50%;
+    box-sizing: border-box;
 }
 
 .selection a:hover {
     color: red;
     text-decoration: underline;
-}
-
-.selection:nth-child(1) {
-    border-right: 2px solid rgb(255, 255, 255);
-}
-
-.selection:nth-child(2) {
-    border-left: 2px solid rgb(255, 255, 255);
+    background-color: #ffcccc;
+    border-radius: 30px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .selection a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-.main-section {
-    background-color: #d5d5d5;
-    border-radius: 30px;
-}
-
-.merchs {
+.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 10px;
+    padding: 0px 10px;
     gap: 10px;
     font-family: monospace;
 }
@@ -86,20 +91,13 @@ header {
 }
 
 .merch img {
-    min-height: fit-content;
-    transition: all .5s;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .merch img:hover {
     transform: scale(0.9);
-}
-
-.merchs:nth-child(1) .merch:nth-child(1) img {
-    border-top-left-radius: 30px;
-}
-
-.merchs:nth-child(1) .merch:nth-child(2) img {
-    border-top-right-radius: 30px;
 }
 
 .merch-text h4 {
@@ -136,24 +134,27 @@ header {
         font-size: 25px;
     }
 
-    h4,.heart-icon,p{
+    h4,
+    .heart-icon,
+    p {
         font-size: 22px;
     }
 
-    .footer-bottom p{
+    .footer-bottom p {
         font-size: 17px;
     }
 }
 
-@media (min-width:990px){
-    section {
-        background-color: rgb(255, 253, 253);
-        margin: 0px 50px;
+@media (min-width:990px) {
+    body {
+        background-color: rgb(255, 255, 255);
     }
 
     header {
         display: flex;
-        padding: 30px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
         background-color: black;
         margin-bottom: 30px;
         box-shadow: 4px 4px 30px rgb(0, 0, 0);
@@ -173,23 +174,21 @@ header {
         align-items: center;
     }
 
-    .merchs {
+    .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 10px 30px;
-        gap: 10px;
+        padding: 0px 30px;
+        gap: 30px;
         font-family: monospace;
-    }
-
-    .merchs:nth-child(1) .merch:nth-child(2) img {
-        border-top-right-radius: 0px;
-    }
-
-    .merchs:nth-child(1) .merch:nth-child(3) img {
-        border-top-right-radius: 30px;
     }
 
     .footer-bottom p {
         color: rgb(0, 0, 0);
+    }
+}
+
+@media (max-width: 480px) {
+    .menus {
+        padding: 10px;
     }
 }
